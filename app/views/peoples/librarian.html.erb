@@ -1,0 +1,9 @@
+<h1>Librarians</h1>
+
+<ul>
+  <% @librarians.each do |p| %>
+    <li>
+    	<%= link_to p.name, people_path(p.id) %>
+    </li>
+  <% end %>
+</ul>

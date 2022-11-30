@@ -1,0 +1,32 @@
+
+<center>
+<fieldset>
+   <h1>Form</h1>
+  <%= form_with model: peoples, url: (@peoples.new_record? ? peoples_path : peoples_path) do |form| %>
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </div>
+    <br>
+    <div>
+      <%= form.label :surname %><br>
+      <%= form.text_field :surname %><br>
+    </div>
+    <br>
+    <div>
+      <%= form.label :email %><br>
+      <%= form.text_field :email %><br>
+    </div>
+    <br>
+    <div>
+      <%= form.file_field :profile_image %>
+    </div>
+    <br>
+
+    <div>
+      <%= form.submit "submit", class: "btn btn-primary" %>
+    </div>
+
+  <% end %>
+</fieldset>
+</center>  

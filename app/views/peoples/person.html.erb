@@ -1,0 +1,9 @@
+<h1>Peoples</h1>
+
+<ul>
+  <% @peoples.each do |p| %>
+    <li>
+    	<%= link_to p.name, people_path(p.id) %>
+    </li>
+  <% end %>
+</ul>

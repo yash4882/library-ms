@@ -1,0 +1,17 @@
+<center>
+	<div>
+		<%if @peoples.profile_image.attached?%>
+			<%= image_tag @peoples.profile_image,width: 200,height: 200 ,class: "circle" %>
+		<%end%>
+	</div>
+
+	<h1><%= format_name(@peoples.name) %></h1>
+
+	<p><%= @peoples.surname %></p>
+
+	<ul>
+		<li><%= link_to "Edit", edit_people_path %></li>
+  		<li><%= link_to "Destroy", peoples_path(@peoples.id), data: {
+                    turbo_method: :delete,turbo_confirm: "Are you sure?"} %></li>
+	</ul>
+</center>
